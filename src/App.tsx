@@ -98,10 +98,10 @@ function App() {
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                   <span className="text-shine">Pedidos IA</span> para tu{' '}
                   <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent transition-all duration-500 ease-in-out transform animate-neon-pulse font-bold">
+                    <span className="text-primary transition-all duration-500 ease-in-out font-bold">
                       {animatedText}
                     </span>
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full animate-pulse"></span>
+                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full"></span>
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
