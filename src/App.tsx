@@ -29,7 +29,7 @@ function App() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Printer className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">PedidosSimple</span>
+              <span className="text-xl font-bold text-gray-900">Restau-Bot</span>
             </div>
             <Button variant="outline" size="sm">
               Contacto
@@ -367,7 +367,7 @@ function App() {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Printer className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">PedidosSimple</span>
+                <span className="text-xl font-bold">Restau-Bot</span>
               </div>
               <p className="text-gray-400">
                 La plataforma de pedidos diseñada para restaurantes pequeños y negocios móviles.
@@ -397,7 +397,7 @@ function App() {
             <div>
               <h4 className="font-semibold mb-4">Contacto</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>soporte@pedidossimple.com</li>
+                <li>soporte@restau-bot.com</li>
                 <li>+52 55 1234 5678</li>
                 <li>WhatsApp: +52 55 9876 5432</li>
               </ul>
@@ -405,7 +405,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 PedidosSimple. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Restau-Bot. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
