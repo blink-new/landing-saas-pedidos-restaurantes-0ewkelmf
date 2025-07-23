@@ -64,27 +64,47 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-card/20 to-background matrix-bg">
-        {/* Animated background elements */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-card/20 to-background">
+        {/* Modern animated background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-2xl animate-float"></div>
+          {/* Gradient mesh background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/10 to-cyan-500/5 animate-gradient-shift" style={{backgroundSize: '400% 400%'}}></div>
           
-          {/* Matrix-style animated lines */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            {[...Array(20)].map((_, i) => (
+          {/* Floating geometric shapes */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-xl animate-mesh-move"></div>
+          <div className="absolute top-1/3 right-20 w-48 h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/30 rounded-full blur-2xl animate-mesh-move" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-500/15 to-pink-500/25 rounded-full blur-3xl animate-mesh-move" style={{animationDelay: '4s'}}></div>
+          <div className="absolute top-1/2 right-1/3 w-40 h-40 bg-gradient-to-br from-accent/25 to-orange-500/20 rounded-full blur-xl animate-mesh-move" style={{animationDelay: '6s'}}></div>
+          
+          {/* Floating particles */}
+          <div className="absolute inset-0">
+            {[...Array(15)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-px h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent"
+                className="absolute w-2 h-2 bg-gradient-to-r from-primary/60 to-accent/60 rounded-full animate-particle-float"
                 style={{
-                  left: `${i * 5}%`,
-                  animationDelay: `${i * 0.5}s`,
-                  animation: 'matrix-rain 15s linear infinite'
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${i * 0.8}s`,
+                  animationDuration: `${8 + Math.random() * 4}s`
                 }}
               />
             ))}
           </div>
+          
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="w-full h-full" style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,107,53,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,107,53,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px'
+            }}></div>
+          </div>
+          
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-background/20 to-background/60"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10">

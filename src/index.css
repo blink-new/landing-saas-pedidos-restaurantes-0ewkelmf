@@ -43,23 +43,49 @@
   }
 }
 
-@keyframes matrix-rain {
-  0% { 
-    transform: translateY(-100vh); 
-    opacity: 0%; 
+@keyframes particle-float {
+  0%, 100% { 
+    transform: translateY(0) translateX(0) rotate(0deg); 
+    opacity: 30%; 
   }
 
-  10% { 
+  25% { 
+    transform: translateY(-20px) translateX(10px) rotate(90deg); 
+    opacity: 80%; 
+  }
+
+  50% { 
+    transform: translateY(-40px) translateX(-5px) rotate(180deg); 
     opacity: 100%; 
   }
 
-  90% { 
-    opacity: 100%; 
+  75% { 
+    transform: translateY(-20px) translateX(-15px) rotate(270deg); 
+    opacity: 60%; 
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { 
+    background-position: 0% 50%; 
   }
 
-  100% { 
-    transform: translateY(100vh); 
-    opacity: 0%; 
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
+@keyframes mesh-move {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+
+  33% { 
+    transform: translate(30px, -30px) scale(1.1); 
+  }
+
+  66% { 
+    transform: translate(-20px, 20px) scale(0.9); 
   }
 }
 
@@ -123,6 +149,18 @@
   animation: cyber-border 2s ease-in-out infinite;
 }
 
+.animate-particle-float {
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+.animate-mesh-move {
+  animation: mesh-move 12s ease-in-out infinite;
+}
+
 .text-shine {
   background: linear-gradient(90deg, #FF6B35, #F7931E, #00D4FF, #FF6B35);
   background-size: 300% auto;
@@ -131,17 +169,8 @@
   animation: text-shine 4s linear infinite;
 }
 
-.matrix-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 98px,
-    rgb(255 107 53 / 10%) 100px
-  );
-  animation: matrix-rain 20s linear infinite;
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
 }
 
 @layer base {
